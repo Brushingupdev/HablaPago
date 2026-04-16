@@ -1317,14 +1317,26 @@
             margin-top: 14px;
         }
 
-        .dl__wa-wrapper {
+        .dl__actions-row {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 40px;
             margin: 40px auto 0;
             padding-top: 32px;
             border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            max-width: 900px;
+        }
+
+        .dl__wa-wrapper {
+            margin: 0;
+            padding-top: 0;
+            border-top: none;
             max-width: 420px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1;
         }
 
         .dl__wa-text {
@@ -1344,11 +1356,17 @@
         }
 
         .dl__support {
-            margin: 18px auto 0;
+            margin: 0;
+            padding: 0 0 0 40px;
+            border-top: none;
+            border-left: 1px dashed rgba(255, 255, 255, 0.12);
             max-width: 420px;
-            padding: 18px 18px 0;
-            border-top: 1px dashed rgba(255, 255, 255, 0.12);
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
         }
 
         .dl__support-title {
@@ -1821,6 +1839,27 @@
             }
 
             /* Download */
+            .dl__actions-row {
+                flex-direction: column;
+                gap: 0;
+                padding-top: 0;
+                border-top: none;
+                margin-top: 20px;
+            }
+
+            .dl__wa-wrapper {
+                margin: 20px auto 0;
+                padding-top: 32px;
+                border-top: 1px dashed rgba(255, 255, 255, 0.15);
+            }
+
+            .dl__support {
+                margin: 18px auto 0;
+                padding: 18px 18px 0;
+                border-left: none;
+                border-top: 1px dashed rgba(255, 255, 255, 0.12);
+            }
+
             .dl__steps {
                 text-align: left;
             }
@@ -2031,7 +2070,7 @@
                 </div>
             </div>
             <div class="hero__visual">
-                <img src="assets/HablaPago1.jpeg" alt="Dashboard principal de HablaPago" class="hero__phone"
+                <img src="assets/img-1.jpeg" alt="Dashboard principal de HablaPago" class="hero__phone"
                     fetchpriority="high">
                 <div class="notif notif--1">
                     <img src="assets/1-yape-logo-transparencia-2.png" alt="Yape" class="notif__logo" width="30"
@@ -2084,7 +2123,7 @@
             <!-- Row 1: Image LEFT, Text RIGHT -->
             <div class="zz" data-aos="fade-up" data-aos-duration="600">
                 <div class="zz__img">
-                    <img src="assets/HablaPago2.jpeg" alt="Dashboard de HablaPago" loading="lazy" decoding="async">
+                    <img src="assets/img-2.jpeg" alt="Dashboard de HablaPago" loading="lazy" decoding="async">
                 </div>
                 <div class="zz__text">
                     <span class="zz__tag">Dashboard</span>
@@ -2121,8 +2160,7 @@
             <!-- Row 2: Text LEFT, Image RIGHT (reversed) -->
             <div class="zz zz--rev" data-aos="fade-up" data-aos-duration="600">
                 <div class="zz__img">
-                    <img src="assets/HablaPago3.jpeg" alt="Activaci&oacute;n de HablaPago" loading="lazy"
-                        decoding="async">
+                    <img src="assets/img-3.jpeg" alt="Activaci&oacute;n de HablaPago" loading="lazy" decoding="async">
                 </div>
                 <div class="zz__text">
                     <span class="zz__tag">Compatibilidad</span>
@@ -2159,7 +2197,7 @@
             <!-- Row 3: Image LEFT, Text RIGHT -->
             <div class="zz" data-aos="fade-up" data-aos-duration="600">
                 <div class="zz__img">
-                    <img src="assets/HablaPago4.jpeg" alt="Plan Pro de HablaPago" loading="lazy" decoding="async">
+                    <img src="assets/img-4.jpeg" alt="Plan Pro de HablaPago" loading="lazy" decoding="async">
                 </div>
                 <div class="zz__text">
                     <span class="zz__tag">Plan Pro</span>
@@ -2202,50 +2240,50 @@
                     <div class="carousel__slide" data-pos="-2" role="button" tabindex="0"
                         aria-label="Ampliar captura: Pantalla de Bienvenida" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago1.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-1.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla mostrando la pantalla de bienvenida y activaci&oacute;n de licencia de HablaPago">
                     </div>
                     <div class="carousel__slide" data-pos="-1" role="button" tabindex="0"
                         aria-label="Ampliar captura: Dashboard principal" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago2.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-2.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla del dashboard principal mostrando el total recaudado hoy y estado del servicio">
                     </div>
                     <div class="carousel__slide" data-pos="0" role="button" tabindex="0"
                         aria-label="Ampliar captura: Lista de pagos recibidos"
                         onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago3.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-3.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla mostrando la lista detallada de pagos recibidos con nombres y montos">
                     </div>
                     <div class="carousel__slide" data-pos="1" role="button" tabindex="0"
                         aria-label="Ampliar captura: Historial general" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago4.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-4.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla del historial completo de transacciones">
                     </div>
                     <div class="carousel__slide" data-pos="2" role="button" tabindex="0"
                         aria-label="Ampliar captura: Funciones Premium" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago5.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-5.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla mostrando las opciones y ajustes de los planes premium">
                     </div>
                     <div class="carousel__slide" data-pos="hidden" aria-hidden="true" role="button" tabindex="-1"
                         aria-label="Ampliar captura: Reportes" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago6.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-6.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla adicional 1">
                     </div>
                     <div class="carousel__slide" data-pos="hidden" aria-hidden="true" role="button" tabindex="-1"
                         aria-label="Ampliar captura: Perfil" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago7.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-7.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla adicional 2">
                     </div>
                     <div class="carousel__slide" data-pos="hidden" aria-hidden="true" role="button" tabindex="-1"
                         aria-label="Ampliar captura: En vivo" onclick="openLb(this.querySelector('img'))"
                         onkeydown="if(event.key==='Enter'||event.key===' ') { event.preventDefault(); openLb(this.querySelector('img')); }">
-                        <img src="assets/HablaPago8.jpeg" loading="lazy" decoding="async"
+                        <img src="assets/img-8.jpeg" loading="lazy" decoding="async"
                             alt="Captura de pantalla adicional 3">
                     </div>
                 </div>
@@ -2311,8 +2349,9 @@
             <h2 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100">Descarga HablaPago</h2>
             <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="150">Descarga la app gratis y act&iacute;vala
                 con tu clave de licencia.</p>
-            <a href="https://github.com/Brushingupdev/PagoVoz/releases/latest/download/Pago-voz.apk" class="btn btn--white" id="dl-btn" download="Pago-voz.apk"
-                data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
+            <a href="https://github.com/Brushingupdev/PagoVoz/releases/download/v1.0.7/app-release.apk"
+                class="btn btn--white" id="dl-btn" download="app-release.apk" data-aos="fade-up" data-aos-duration="500"
+                data-aos-delay="200">
                 <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
                     <polyline points="7 10 12 15 17 10" />
@@ -2320,39 +2359,43 @@
                 </svg>
                 Descargar app
             </a>
-            <p class="dl__ver" data-aos="fade-up" data-aos-delay="250">v1.0.5 &middot; Android 7+</p>
-            <div class="dl__wa-wrapper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="265">
-                <p class="dl__wa-text">
-                    Pide tu clave de activaci&oacute;n por WhatsApp
-                </p>
-                <p class="dl__price">Pago &uacute;nico de activaci&oacute;n: S/ 10</p>
-                <a href="https://wa.me/51906020854?text=Quiero%20adquirir%20mi%20clave%20de%20licencia"
-                    class="btn btn--wa" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-                        style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
-                        <path
-                            d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.57 0 .3 5.27.3 11.75c0 2.07.54 4.1 1.57 5.89L0 24l6.52-1.8a11.7 11.7 0 0 0 5.53 1.4h.01c6.48 0 11.75-5.27 11.75-11.75 0-3.14-1.22-6.09-3.29-8.37ZM12.06 21.6h-.01a9.75 9.75 0 0 1-4.97-1.36l-.36-.22-3.87 1.07 1.03-3.77-.24-.39A9.74 9.74 0 0 1 2.3 11.75C2.3 6.37 6.67 2 12.05 2c2.6 0 5.05 1.01 6.88 2.85a9.67 9.67 0 0 1 2.87 6.9c0 5.38-4.37 9.75-9.74 9.75Zm5.35-7.31c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.24.48 1.66.61.7.22 1.34.19 1.85.11.56-.08 1.73-.71 1.98-1.4.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34Z" />
-                    </svg>
-                    Quiero adquirir mi clave de licencia
-                </a>
-            </div>
-            <div class="dl__support" data-aos="fade-up" data-aos-duration="500" data-aos-delay="285">
-                <p class="dl__support-title">Soporte 24/7 para instalaci&oacute;n</p>
-                <p class="dl__support-text">Si necesitas ayuda para instalar la app o activarla, escr&iacute;beme por
-                    WhatsApp y te acompa&ntilde;o paso a paso.</p>
-                <a href="https://wa.me/51906020854?text=Necesito%20ayuda%20para%20instalar%20y%20activar%20la%20app"
-                    class="btn btn--wa" target="_blank" rel="noopener noreferrer">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-                        style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
-                        <path
-                            d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.57 0 .3 5.27.3 11.75c0 2.07.54 4.1 1.57 5.89L0 24l6.52-1.8a11.7 11.7 0 0 0 5.53 1.4h.01c6.48 0 11.75-5.27 11.75-11.75 0-3.14-1.22-6.09-3.29-8.37ZM12.06 21.6h-.01a9.75 9.75 0 0 1-4.97-1.36l-.36-.22-3.87 1.07 1.03-3.77-.24-.39A9.74 9.74 0 0 1 2.3 11.75C2.3 6.37 6.67 2 12.05 2c2.6 0 5.05 1.01 6.88 2.85a9.67 9.67 0 0 1 2.87 6.9c0 5.38-4.37 9.75-9.74 9.75Zm5.35-7.31c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.24.48 1.66.61.7.22 1.34.19 1.85.11.56-.08 1.73-.71 1.98-1.4.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34Z" />
-                    </svg>
-                    Necesito ayuda para instalar la app
-                </a>
+            <p class="dl__ver" data-aos="fade-up" data-aos-delay="250">v1.0.7 &middot; Android 7+</p>
+            <div class="dl__actions-row">
+
+                <div class="dl__wa-wrapper" data-aos="fade-up" data-aos-duration="500" data-aos-delay="265">
+                    <p class="dl__wa-text">
+                        Pide tu clave de activaci&oacute;n por WhatsApp
+                    </p>
+                    <p class="dl__price">Pago &uacute;nico de activaci&oacute;n: S/ 10</p>
+                    <a href="https://wa.me/51906020854?text=Quiero%20adquirir%20mi%20clave%20de%20licencia"
+                        class="btn btn--wa" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                            style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
+                            <path
+                                d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.57 0 .3 5.27.3 11.75c0 2.07.54 4.1 1.57 5.89L0 24l6.52-1.8a11.7 11.7 0 0 0 5.53 1.4h.01c6.48 0 11.75-5.27 11.75-11.75 0-3.14-1.22-6.09-3.29-8.37ZM12.06 21.6h-.01a9.75 9.75 0 0 1-4.97-1.36l-.36-.22-3.87 1.07 1.03-3.77-.24-.39A9.74 9.74 0 0 1 2.3 11.75C2.3 6.37 6.67 2 12.05 2c2.6 0 5.05 1.01 6.88 2.85a9.67 9.67 0 0 1 2.87 6.9c0 5.38-4.37 9.75-9.74 9.75Zm5.35-7.31c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.24.48 1.66.61.7.22 1.34.19 1.85.11.56-.08 1.73-.71 1.98-1.4.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34Z" />
+                        </svg>
+                        Quiero adquirir mi clave de licencia
+                    </a>
+                </div>
+                <div class="dl__support" data-aos="fade-up" data-aos-duration="500" data-aos-delay="285">
+                    <p class="dl__support-title">Soporte 24/7 para instalaci&oacute;n</p>
+                    <p class="dl__support-text">Si necesitas ayuda para instalar la app o activarla, escr&iacute;beme
+                        por
+                        WhatsApp y te acompa&ntilde;o paso a paso.</p>
+                    <a href="https://wa.me/51906020854?text=Necesito%20ayuda%20para%20instalar%20y%20activar%20la%20app"
+                        class="btn btn--wa" target="_blank" rel="noopener noreferrer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                            style="filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));">
+                            <path
+                                d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.57 0 .3 5.27.3 11.75c0 2.07.54 4.1 1.57 5.89L0 24l6.52-1.8a11.7 11.7 0 0 0 5.53 1.4h.01c6.48 0 11.75-5.27 11.75-11.75 0-3.14-1.22-6.09-3.29-8.37ZM12.06 21.6h-.01a9.75 9.75 0 0 1-4.97-1.36l-.36-.22-3.87 1.07 1.03-3.77-.24-.39A9.74 9.74 0 0 1 2.3 11.75C2.3 6.37 6.67 2 12.05 2c2.6 0 5.05 1.01 6.88 2.85a9.67 9.67 0 0 1 2.87 6.9c0 5.38-4.37 9.75-9.74 9.75Zm5.35-7.31c-.29-.15-1.73-.85-2-.95-.27-.1-.47-.15-.67.15-.2.29-.76.95-.93 1.14-.17.2-.34.22-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.71-1.61-2-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.15-.17.2-.29.29-.49.1-.2.05-.37-.02-.51-.07-.15-.67-1.61-.92-2.2-.24-.58-.48-.5-.67-.5h-.57c-.2 0-.51.07-.78.37-.27.29-1.02 1-1.02 2.44 0 1.44 1.05 2.83 1.2 3.02.15.2 2.07 3.16 5.02 4.43.7.3 1.24.48 1.66.61.7.22 1.34.19 1.85.11.56-.08 1.73-.71 1.98-1.4.24-.68.24-1.27.17-1.39-.07-.12-.27-.2-.56-.34Z" />
+                        </svg>
+                        Necesito ayuda para instalar la app
+                    </a>
+                </div>
             </div>
             <div class="dl__steps" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300">
                 <div class="dl__steps-title">Instalaci&oacute;n r&aacute;pida</div>
-                <div class="dl__s"><span class="dl__sn">1</span><span>Descarga <strong>Pago-voz.apk</strong> en tu
+                <div class="dl__s"><span class="dl__sn">1</span><span>Descarga la app en tu
                         celular.</span></div>
                 <div class="dl__s"><span class="dl__sn">2</span><span>Abre el archivo y acepta fuentes
                         desconocidas.</span></div>
